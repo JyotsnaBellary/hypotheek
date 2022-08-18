@@ -1,0 +1,262 @@
+<div class="row" >
+  <div class="col-md-6 offset-md-3" style="margin: -1%;">
+    <br>
+    <br>
+      <h3 style="color:orange;font-size:40px;border:orange; border-width:3px; border-style:ridge;position:absolute; left:160px; ">Eligibility Calculator</h3>
+      <br>
+    </div>
+  </div>
+
+<br>
+
+<div id="wrapper" style="background-color: white; padding: .5%;margin: 2%;">
+  <body>
+  <div class="bg-dark" id="first"><h2></h2>
+    <table  cellpadding ="8">
+      <div style="text-align:center;">
+          <caption align="top">
+      </caption>
+      <form name ="loanForm">
+          <tr>
+              <td>Monthly Income</td>
+              <td><input [(ngModel)]="num1" type="income" name="mIncome" size="30"
+                  tabindex="2" placeholder="Enter your salary" colour="black" class="form-inline">
+              </td>
+          </tr>
+
+          <tr>
+            <td>Rate Of Interest</td>
+            <td>
+                <select name="roi" tabindex="2">
+                    <option selected>8.5</option>
+                </select>
+              </td>
+          </tr>
+
+          <tr>
+            <td>Calculate</td>
+            <button class="btn btn-primary"  align="center" (click)="loanAmount()" type="submit" >Calculate</button>
+          </tr>
+          <br>
+
+          <tr>
+          <td>Your Eligible Home Loan  :  </td>
+            <td>
+                <p>{{total}}</p>
+              </td>
+          </tr>
+              
+      <br>
+        </form>
+      </div>
+  </table>
+  </div>
+
+
+  <div class="col-md-6 offset-md-3" style="margin-top: -1%;">
+    <br>
+    <br>
+      <h3 style="color:orange;font-size:40px;border:orange; border-width:3px; border-style:ridge;position:absolute; right:250px; top:50px;">EMI Calculator</h3>
+      <br>
+    </div>
+  <div style="margin: 1%; margin-top:-2.5%;" class="bg-dark" id="second"><h2></h2>
+    <table  cellpadding ="8">
+      <div style="text-align:center;">
+          <caption align="top">
+      </caption>
+      <form name ="loanForm">
+
+        <tr>
+          <td>Loan Amount <span>(should be lessthan the calculated loan amount)</span></td>
+          <td><input [(ngModel)]="num2" type="loan" name="loan" size="30"
+              tabindex="1" placeholder="Enter your Loan Amount" colour="black">
+          </td>
+      </tr>
+
+        <tr>
+          <td>Tenure (in years)</td>
+          <td>
+              <select name="duration" [(ngModel)]="num3" tabindex="1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+              </select>
+             </td>
+      </tr>
+
+      <tr>
+        <td>Rate Of Interest</td>
+        <td>
+            <select name="roi" tabindex="2">
+                <option selected>8.5</option>
+            </select>
+          </td>
+      </tr>
+
+      <tr>
+        <td>Calculate</td>
+        <td colspan="3">
+            <button  class="btn btn-primary" (click)="emi()" type="submit" >Calculate</button>
+        </td>
+    </tr>
+ 
+          <tr>
+            <td>Your Monthly Home Loan EMI  :  </td>
+              <td>
+                  <p>{{monthlyEMI}}</p>
+                </td>
+            </tr>
+          
+  <br>
+      </form>
+      </div>
+      </table>
+     
+    </div>
+  
+   </body>
+      </div>
+
+
+<!-- <div class="row">
+  <div class="col-md-6 offset-md-3">
+    <br>
+    <br>
+      <h3>Eligibility Calculator</h3>
+      <br>
+    </div>
+  <hr>
+    
+     
+</div>
+
+<br>
+
+<div class="col-md-6 offset-md-3">
+    <body>
+      <table  cellpadding ="8">
+          <div style="text-align:center;">
+              <caption align="top">
+          </caption>
+          <form name ="loanForm">
+              <tr>
+                  <td>Monthly Income</td>
+                  <td><input [(ngModel)]="num1" type="income" name="mIncome" size="30"
+                      tabindex="2" placeholder="Enter your salary">
+                  </td>
+              </tr>
+
+              <tr>
+                <td>Rate Of Interest</td>
+                <td>
+                    <select name="roi" tabindex="2">
+                        <option selected>8.5</option>
+                    </select>
+                  </td>
+              </tr>
+
+              <tr>
+                <td>Calculate</td>
+                <button class="btn btn-primary"  align="center"(click)="loanAmount()" type="submit" >Calculate</button>
+              </tr>
+              <br>
+
+              <tr>
+              <td>Your Eligible Home Loan  :  </td>
+                <td>
+                    <p>{{total}}</p>
+                  </td>
+              </tr>
+                  
+          <br>
+            </form>
+          </div>
+      </table>
+    </body>
+    <br>
+</div>
+
+
+
+<div class="row">
+<div class="col-md-6 offset-md-3">
+  <br>
+  <br>
+    <h3>EMI Calculator</h3>
+    <br>
+  </div>
+<hr>
+ 
+</div>
+<br>
+<div class="col-md-6 offset-md-3">
+<body>
+  <table  cellpadding ="8">
+      <div style="text-align:center;">
+          <caption align="top">
+      </caption>
+      <form name ="loanForm">
+
+        <tr>
+          <td>Loan Amount <span>(should be lessthan the calculated loan amount)</span></td>
+          <td><input [(ngModel)]="num2" type="loan" name="loan" size="30"
+              tabindex="1" placeholder="Enter your Loan Amount">
+          </td>
+      </tr>
+
+        <tr>
+          <td>Tenure (in years)</td>
+          <td>
+              <select name="duration" [(ngModel)]="num3" tabindex="1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+              </select>
+             </td>
+      </tr>
+
+      <tr>
+        <td>Rate Of Interest</td>
+        <td>
+            <select name="roi" tabindex="2">
+                <option selected>8.5</option>
+            </select>
+          </td>
+      </tr>
+
+      <tr>
+        <td>Calculate</td>
+        <td colspan="3">
+            <button  class="btn btn-primary" (click)="emi()" type="submit" >Calculate</button>
+        </td>
+    </tr>
+ 
+          <tr>
+            <td>Your Monthly Home Loan EMI  :  </td>
+              <td>
+                  <p>{{monthlyEMI}}</p>
+                </td>
+            </tr>
+          
+  <br>
+      </form>
+      </div>
+      </table>
+      </body>
+      <br>
+      
+</div> -->

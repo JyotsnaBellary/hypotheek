@@ -1,0 +1,41 @@
+<div>
+    <div class="panel-heading">
+        <h2 style="color: orange">Users List</h2>
+      </div>
+
+      <div>
+        <table class="table table-striped table-bordered text-center bg-dark">
+            <thead>
+              <tr class="" style="color:white;">
+                <th style="padding: 1%;">Id</th>
+                <th style="padding: 1%;">First Name</th>
+                <th style="padding: 1%;">Last Name</th>
+                <th style="padding: 1%;">Date of Birth</th>
+                <!-- <th style="padding: 1%;">Files</th> -->
+                <th style="padding: 1%;">Actions</th>
+              
+              </tr>
+            </thead>
+
+            <tbody>
+                <tr class="bg-light" *ngFor="let u of users">
+                  <td>{{ u.emailId}}</td>
+                  <td>{{ u.firstName }}</td>
+                  <td>{{ u.lastName}}</td>
+                  <td>{{ u.dob}}</td>
+                  <!-- <td><button (click)="docDetails(u.id)" class="btn btn-info" style="">Details</button></td> -->
+                  <!-- <td><button (click)="docDetails(u.emailId)" class="btn btn-info" style="">Details</button></td> -->
+                  <!-- <td> -->
+                  <td *ngFor="let d of loanAmount ">{{ d.loanAmount }}</td>
+                  <td>
+                    <button (click)="docDetails(u.emailId)" class="btn btn-info" style="margin-right: 30px">Details</button>
+                    <button [disabled] = "u.accept" (click)="updateuser(u.id)"  class="btn btn-success" >Accept</button>
+                    <button [disabled] = "u.reject" (click)="deleteUser(u.id)"  class="btn btn-danger" style="margin-left: 30px">Reject</button>
+                  <!-- <button (click)="userDetails(product.id)" class="btn btn-info" style="margin-left: 10px">Details</button></td> -->
+
+                </tr>
+              </tbody>
+        </table>
+      </div>
+      <button (click)="adminLogout()" style="background-color: #0fb9b4;" class="btn btn-success">Logout</button>
+</div>

@@ -1,0 +1,21 @@
+.form-control {
+    border: 1px solid #333;
+    border: none;
+    border-bottom: 1px solid #333;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-right: 100;
+    margin-bottom: 30px;
+}
+button {
+    border: none;
+    width:164px;
+    height: 50px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

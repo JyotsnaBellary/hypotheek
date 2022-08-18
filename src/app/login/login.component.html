@@ -1,0 +1,30 @@
+
+<div class="container col-lg-6" style="">
+  <div class="card">
+    <div class="card-body" >
+  <h1 class="text-center" style="color: orange;">User Login</h1>
+      <form class="form-group" ngNativeValidate>
+        <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+        <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+        <div class="form-group">
+          <label for="email"><h4>User Name:</h4></label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name"
+            name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="pwd"><h4>Password:</h4></label>
+          <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+            name="password" required>
+        </div>
+        <!-- <br> -->
+        <button (click)="checkLogin(username)" style="background-color: #212529;" class="btn btn-success"><h5>Login</h5></button>
+        <br>
+        
+      
+        <button (click)="userRegister()" style="background-color: #212529;" class="btn btn-success"><h5>Register</h5></button>
+        </form>
+
+       
+    </div>
+  </div>
+</div>

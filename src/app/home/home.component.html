@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+    <!-- <div class="container h-100" style="height: 60%; margin-top: -5%;"> -->
+
+      <!-- </div> -->
+      <div id="wrapper" style="background-color: #eee;">
+        <div class="bg-dark" id="fifth">
+          <img src="assets/images/Hypotheek.jpg" />
+         
+        </div>   
+        <div id="fourth" class="bg-dark">
+            <h3 style="color: white;"> 
+              Home is where the heart is. <br>For most of us home is everything we dream of . 
+              So we are here to support you to achieve your dream!!!<br><br><br>
+              Welcome to <span style="color: orange;">Hypotheek</span>! </h3>
+        </div>
+    </div>
+
+      <div id="wrapper" style="background-color: #eee;">
+        
+        <div  id="second"><br><br>
+          <img src="assets/images/home.gif" alt="" style="width:200%">
+        </div>
+        <div class="bg-dark" id="first">
+          <h3>Home Loans</h3>
+          <h4>With our Express Home Loans platform you can now get a digital sanction of your Home Loan at attractive rate of interest.<br>
+            Click here to Start pursuing your home dream with good intensions and our support!!</h4>
+          
+          <button *ngIf="!userloginService.isUserLoggedIn()" style="background-color: orange;" class="btn-lg" type="submit"><a href="login" style="text-decoration: none; color: black;" class="" routerLinkActive="active">Apply Now</a></button>
+          <button *ngIf="userloginService.isUserLoggedIn()" style="background-color: orange;" class="btn-lg" type="submit"><a href="application/" style="text-decoration: none; color: black;" class="" routerLinkActive="active">Apply Now</a></button>
+      </div>
+      <div  id="second"><br><br>
+        <img src="assets/images/key.gif" alt="" style="width:200%">
+      </div>
+    </div>
+</body>
+
+</html>

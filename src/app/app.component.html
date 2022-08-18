@@ -1,0 +1,117 @@
+<header>
+    <div id="container">
+
+        <!-- <nav class=" navbar-dark"> -->
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark " style="top:0;">
+            <h3>
+                <!-- <a routerLink="home" class="" routerLinkActive="active"><img style="margin-left:3%; " width="50px " height="50px " src="assets/images/logo.png "> </a> -->
+            </h3>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent ">
+                <ul class="navbar-nav mr-auto ml-5 mt-4">
+                    <div class="logo">
+                        <img src="assets/images/Hypotheek.jpg" />
+                    </div>
+                    &nbsp;&nbsp;
+                    <li class="nav-item mb-2">
+                        <a class="nav-link active p-1" routerLink="home" routerLinkActive=" active ">
+                            <h5>Home</h5>
+                        </a>
+                    </li>
+                    &nbsp;&nbsp;
+                    <li class="nav-item mb-2">
+                        <a  routerLink="aboutus" class="nav-link active p-1 " routerLinkActive="active ">
+                            <h5>About Us</h5>
+                        </a>
+                    </li>
+                    &nbsp;&nbsp;
+                    <li class="nav-item mb-2">
+                        <a  routerLink="features" class="nav-link active p-1 " routerLinkActive="active ">
+                            <h5>Features</h5>
+                        </a>
+                    </li>
+                    &nbsp;&nbsp;
+
+                    <li class="nav-item mb-2">
+                        <a routerLink="faq" class="nav-link active p-1 " routerLinkActive="active ">
+                            <h5>FAQ's</h5>
+                        </a>
+                    </li>
+                    &nbsp;&nbsp;
+
+                    <li class="nav-item ">
+                        <a routerLink="calculator" class="nav-link active p-1" routerLinkActive="active">
+                            <h5>Calculator</h5>
+                        </a>
+                    </li>
+
+                    &nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="loan-tracker" class="nav-link active p-1 " routerLinkActive="active"><h5>Loan Tracker</h5></a>
+                      
+                    </li>
+                 
+
+
+                </ul>
+                <ul class="navbar-nav ml-7">
+                    <li class="nav-item">
+                        <a *ngIf="!userloginService.isUserLoggedIn()" routerLink="login" class="nav-link active p-1 " routerLinkActive="active ">
+                            <h5>User Login</h5>
+                        </a>
+                    </li>
+
+                    
+
+                    &nbsp;&nbsp;
+
+                    
+
+                    <li class="nav-item">
+                        <a *ngIf="!userloginService.isUserLoggedIn()" routerLink="adminLogin" class="nav-link active p-1" routerLinkActive="active ">
+                            <h5>Admin Login</h5>
+                        </a>
+                    </li>
+                
+                
+                    <li class="nav-item" style="padding-right:5px; ">
+                        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="user-logout" class="nav-link active p-1 " routerLinkActive="active">
+                            <h5>Logout</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="padding-right:5px; ">
+                        <a *ngIf="userloginService.isUserLoggedIn()" routerLink="your-account" class="nav-link active p-1 " routerLinkActive="active"><h5>Account</h5></a>
+                      </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+        <div class="card " style="background-color: #eee;">
+
+            <div class="card-body ">
+
+                <router-outlet></router-outlet>
+
+            </div>
+        </div>
+
+        <footer class="page-footer font-small mdb-color lighten-3 card-body bg-dark">
+
+            <div class="footer-copyright text-center ">Copyright © 2000 <strong>|</strong>&nbsp;<br><span><h5>Hypo<span style="color: orange;  " class="txt-lg">theek</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

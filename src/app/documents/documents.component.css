@@ -1,0 +1,42 @@
+h2 {
+    color:orange;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  table {
+   
+    text-align: center;
+  }
+  
+  strong {
+    padding-left: 50px;
+  }
+  
+  li {
+    color:red;
+    text-align: center;
+    padding-left: 30px;
+  }
+  
+  span {
+    font-weight: bold;
+    color:red;
+    padding-left: 20px;
+  }
+  
+  button {
+      
+      color:black;
+      align-content: right;
+      
+  }
+ 
+  button:hover {
+    background-color:crimson;
+  }
+  
+  h3 {
+    color:green;
+  }
+ 
+  

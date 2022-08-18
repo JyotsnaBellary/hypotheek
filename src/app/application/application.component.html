@@ -1,0 +1,170 @@
+<div class="root">
+    <div id="wrapper">
+    <h1>Income Details</h1>
+        <!-- <div *ngIf="yourForm.hasError('whitespace')">Please enter valid data</div> -->
+
+        <div class="bg-dark" id="first">
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Property Location:</h5></label>
+                <input type="text" class="form-control" name="propertyLocation" [(ngModel)]="details.propertyLocation"  required/>
+            </div><br>
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Property Name:</h5></label>
+                <input class="form-control" type="text"  name="propertyName" [(ngModel)]="details.propertyName" required />
+            </div><br>
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Estimated Amount:</h5></label>
+                <input class="form-control" type="text" name="estimatedAmount" [(ngModel)]="details.estimatedAmount" required/>
+            </div>
+            
+            <p>
+            </p>
+        </div>
+        <div class="bg-dark" id="second">
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Type of Employment:</h5></label>
+            &nbsp;
+                <input type="radio" value="salaried" name="employmentType" [(ngModel)]="details.employmentType" size="50"
+                    required>Salaried
+            &nbsp;
+            <input type="radio" value="selfEmployed" name="employmentType" [(ngModel)]="details.employmentType" size="30"
+                    required>Self Employed
+            </div>
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Retirement age:</h5></label>
+                <input  class="form-control" type="text" maxlength="2" name="age" [(ngModel)]="details.age" pattern="\d{2}" required/>
+            </div>
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Organization Type:</h5></label>
+                <input  class="form-control" type="text" name="OrganizationType" [(ngModel)]="details.OrganizationType" required/>
+            </div>
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Employer Name:</h5></label>
+                <input class="form-control" type="text" name="employerName" [(ngModel)]="details.employerName" required />
+            </div>
+        </div>
+    </div>
+
+<!--     
+    <div class="col-md-6 offset-md-3">
+    <body>
+        <br>
+        <br>
+    <p>Property Location:
+        <input type="text"  name="propertyLocation" [(ngModel)]="details.propertyLocation"  />
+    </p>
+    <p>Property Name:
+        <input type="text"  name="propertyName" [(ngModel)]="details.propertyName"  />
+    </p>
+    <p>Estimated Amount:
+        <input type="text" name="estimatedAmount" [(ngModel)]="details.estimatedAmount" />
+    </p>
+    <tr>
+        <td colspan="7" style="padding-left:300px">
+      
+      <br>
+      <br>
+      <h3>{{msg1}}</h3>
+      </td>
+    </tr>
+</body>
+
+</div>
+</div>
+
+<br>
+<br> -->
+
+<!-- <div class="root">
+    <div class="col-md-6 offset-md-3">
+    <body>
+        <br>
+        <br>
+    <p>Type of Employment:
+        <input type="radio" value="salaried" name="employmentType" [(ngModel)]="details.employmentType" size="30"
+            required>Salaried
+            <input type="radio" value="selfEmployed" name="employmentType" [(ngModel)]="details.employmentType" size="30"
+            required>Self Employed
+    </p>
+    <p>Retirement age:
+        <input type="text" maxlength="2" name="age" [(ngModel)]="details.age" pattern="\d{2}" />
+    </p>
+    <p>Organization Type:
+        <input type="text" name="OrganizationType" [(ngModel)]="details.OrganizationType" />
+    </p>
+    <p>Employer Name:
+        <input type="text" name="employerName" [(ngModel)]="details.employerName" />
+    </p>
+    <tr>
+        <td colspan="7" style="padding-left:300px">
+    
+      <h3>{{msg2}}</h3>
+      </td>
+    </tr>
+</body>
+</div>
+</div> -->
+
+<br>
+
+<hr style="color: red">
+
+
+<div class="root">
+    <h1>Loan Details</h1>
+    <div class="bg-dark" id="third">
+    
+        
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" for="form3Example1c"><h5>Interest Rate:</h5></label> &nbsp;
+            <p><select name="interestRate" [(ngModel)]="details.interestRate" tabindex="2" >
+                <option selected>8.5</option>
+            </select></p>
+        </div>
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" for="form3Example1c"><h5>Tenure:</h5></label>
+            <p>
+                <select name="tenure" [(ngModel)]="details.tenure" tabindex="1">
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" for="form3Example1c"><h5>Loan Amount:</h5></label>
+            <input required class="form-control" type="text" name="loanAmount" [(ngModel)]="details.loanAmount" maxlength="8" pattern="\d{8}"/>
+        </div>
+    
+    <p>
+    </p>
+    <button type="submit" (click)="clickEvent3()" style="background-color: orange;" class="btn-lg">Submit</button>
+    &nbsp;
+    <button style="background-color: orange;" class="btn-lg"><a (click)="next()" style="text-decoration: none; color: black;" class="" >Next</a></button>
+      <!-- <button style="background-color: orange;" class="btn-lg"> <a style="text-decoration: none;" align="center" class="btn btn-link" (click)="next()"><strong>Next</strong></a></button> -->
+   
+      <!-- <button class="btn btn-warning" type="submit" (click)="clickEvent3()">Submit</button>
+      <button type="submit" (click)="clickEvent3()" style="background-color: orange;" class="btn-lg">Submit</button>
+
+      <br>
+      <br>
+      <h3 style="color: orange;">{{msg3}}</h3>
+      
+    
+      <button style="background-color: orange;" class="btn-lg"> <a align="center" class="btn btn-link" (click)="next()"><strong>Next</strong></a></button>
+    -->
+</div>
+<h3 style="color: orange;">{{msg3}}</h3>
+
+<br>
+<br>
+</div>

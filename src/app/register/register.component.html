@@ -1,0 +1,97 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3 align="center" style="color:orange;">User Registration Form</h3>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" formControlName="emailId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.emailId.errors }" />
+                            <div *ngIf="submitted && f.emailId.errors" class="invalid-feedback">
+                                <div *ngIf="f.emailId.errors.required">Email is required</div>
+                                <div *ngIf="f.emailId.errors.emailId">Email must be a valid email address</div>
+                            </div>
+                        </div>
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            <div *ngIf="f.firstName.errors.pattern">Inavalid First Name</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                            <div *ngIf="f.firstName.errors.pattern">Inavalid First Name</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Confirm Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.ma">Passwords Shlould Match</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select formControlName="gender" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">
+                            <option value="">Choose...</option>
+                            <option *ngFor="let Gender of gender" [ngValue]="Gender">{{Gender}}</option>
+                         </select>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" formControlName="dob" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" />
+                        <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                            <div *ngIf="f.dobe.errors.required">DOB is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone No</label>
+                        <input type="text" formControlName="phoneNumber" maxlength="10" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+                        <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.phoneNumber.errors.required">Phone number is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Aadhar No</label>
+                        <input type="text" formControlName="aadharNumber" maxlength="12" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.aadharNumber.errors }" />
+                        <div *ngIf="submitted && f.aadharNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.aadharNumber.errors.required">Aadhar Number is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pan No</label>
+                        <input type="text" formControlName="panNumber" maxlength="10" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.panNumber.errors }" />
+                        <div *ngIf="submitted && f.panNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.panNumber.errors.required">Pan number is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>

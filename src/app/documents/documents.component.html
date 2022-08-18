@@ -1,0 +1,52 @@
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 offset-md-2"><br>
+              <h3>Upload Documents</h3>
+              <form [formGroup]="documentForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label>Upload Pan Document</label>
+                  <input type="file" accept="image/*" formControlName="panFile" enctype="multipart/form-data" name="panFile" ng-model="a" (change)="pan($event)" class="form-control" required  #fileInput><br>
+                  <img height="500px" *ngIf="panUrl" [src]="panUrl">
+                </div>
+
+                <div class="form-group">
+                  <label>Upload voter Document</label>
+                  <input type="file" accept="image/*" formControlName="voterFile" name="voterFile" enctype="multipart/form-data" ng-model="b" (change)="voter($event)" class="form-control"  required  #fileInput><br>
+                  <img height="500px" *ngIf="voterUrl" [src]="voterUrl">
+                </div>
+
+                <div class="form-group">
+                  <label>Upload salary Document</label>
+                  <input type="file" accept="image/*" ng-model="c" formControlName="salaryFile" enctype="multipart/form-data" name="salaryFile" (change)="salary($event)" class="form-control"  required  #fileInput><br>
+                  <img height="500px" *ngIf="salaryUrl" [src]="salaryUrl">
+                </div>
+
+                <div class="form-group">
+                  <label>Upload loa Document</label>
+                  <input type="file" accept="image/*" ng-model="d" formControlName="loaFile" enctype="multipart/form-data" name="loaFile" (change)="loa($event)" class="form-control"  required #fileInput><br>
+                  <img height="500px" *ngIf="loaUrl" [src]="loaUrl">
+                </div>
+
+                <div class="form-group">
+                  <label>Upload noc Document</label>
+                  <input type="file" accept="image/*" ng-model="e" formControlName="nocFile" enctype="multipart/form-data" name="nocFile" (change)="noc($event)" class="form-control"  required  #fileInput><br>
+                  <img height="500px" *ngIf="nocUrl" [src]="nocUrl">
+                </div>
+
+                <div class="form-group">
+                  <label>Upload agreement Document</label>
+                  <input type="file" accept="image/*" ng-model="f" formControlName="agreementFile" enctype="multipart/form-data" name="agreementFile" (change)="agreement($event)" class="form-control"  required #fileInput><br>
+                  <img height="500px" *ngIf="agreementUrl" [src]="agreementUrl">
+                </div>
+                <br>
+                
+                <!-- <div *ngIf="yourForm.hasError('whitespace')">Please enter valid data</div><br> -->
+                  <div class="form-group">
+                      <button class="btn btn-primary">Upload</button>
+                  </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>

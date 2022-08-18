@@ -1,0 +1,111 @@
+
+
+h3 {
+		color: darkorange;
+	
+}
+
+button{
+	text-align: center;
+	height: 50px;
+	width: 150px;
+	color:whitesmoke;
+	cursor: pointer;
+	background-color: skyblue;
+	border: 1px solid ;
+	border-radius: 20px;
+
+}
+
+ button:hover{
+	background: orange;
+}
+
+*{
+	box-sizing:border-box;
+  }
+  
+  .column {
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+
+  #wrapper {
+    /* width: 500px; */
+    /* border: 1px solid black; */
+    overflow: hidden; 
+    /* justify-content: center; */
+    padding: 2%;
+}
+
+#first {
+    width: 500px;
+    float:left; /* add this */
+    border-radius: 2%;
+    border: black 1px solid;
+    margin: 3%;
+    margin-left: 7%;
+    padding: 2%;
+    height: 350px;
+    color: white;
+    font-weight:bold;
+}
+
+#second {
+  width: 350px;
+  /* height: 500px; */
+  float:left; /* add this */
+  margin-left: 4%;
+  color: white;
+  font-weight:bold;
+}
+
+#third {
+  width: 400px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin: 2%;
+  margin-left: 8%;
+  padding: 2%;
+  height: 325px;
+  color: white;
+  font-weight:bold;
+}
+
+btn{
+	background-color: orange;
+ }
+
+ 
+#fourth {
+  width: 500px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin:2%;
+
+  margin-bottom: 3%;
+  padding: 2%;
+  height: 380px;
+  color: black;
+  font-weight:bold;
+
+}
+
+#fifth {
+width: 800px;
+float:left; /* add this */
+margin:2%;
+margin-bottom: 4%;
+height: 250px;
+font-weight:bold;
+}

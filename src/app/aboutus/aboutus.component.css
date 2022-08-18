@@ -1,0 +1,108 @@
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: orange;
+    text-align: center;
+   }
+ h4{
+   font-size: xx-large;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bolder;
+   border: 0vw;
+  
+ }
+ h2{
+   font-weight:bold;
+   color: orange;
+ }
+ ul{
+   font-style: normal;
+   margin-top: auto;
+  }
+
+  #wrapper {
+    /* width: 500px; */
+    /* border: 1px solid black; */
+    overflow: hidden; 
+    /* justify-content: center; */
+    padding: 2%;
+}
+#first {
+    width: 400px;
+    float:left; /* add this */
+    border-radius: 2%;
+    border: black 1px solid;
+    margin: 2%;
+    padding: 2%;
+    height: 325px;
+    color: white;
+    font-weight:bold;
+
+
+}
+#second {
+  width: 400px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin: 2%;
+  padding: 2%;
+  height: 325px;
+  color: white;
+  font-weight:bold;
+}
+
+#third {
+  width: 400px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin: 2%;
+  padding: 2%;
+  height: 325px;
+  color: white;
+  font-weight:bold;
+}
+
+#fourth {
+  width: 500px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin:2%;
+  margin-bottom: 4%;
+  padding: 2%;
+  height: 325px;
+  color: black;
+  font-weight:bold;
+  background-color: orange;
+
+
+}
+
+#fifth {
+width: 800px;
+float:left; /* add this */
+border-radius: 2%;
+border: black 1px solid;
+margin:2%;
+margin-bottom: 4%;
+padding: 2%;
+height: 325px;
+color: white;
+font-weight:bold;
+}
+
+#sixth {
+  width: 900px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin-left:19%;
+  margin-bottom: 4%;
+  padding: 2%;
+  color: black;
+  font-weight:bold;
+  background-color: orange;
+
+
+}

@@ -1,0 +1,91 @@
+<div class="col-md-6 offset-md-3" id="wrapper">
+    <div class="bg-dark" id="first">
+        <h2 style="color: orange;">Track Your Application Status Here</h2>
+        <div>
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Email Id</h5></label>
+                <input type="text" size="30" 
+                class="form-control"  tabindex="1" [(ngModel)]="email" placeholder="Enter your Regsitered mail">
+            </div><br>
+            <div class="form-outline flex-fill mb-0">
+                <label class="form-label" for="form3Example1c"><h5>Mobile Number</h5></label>
+                <input type="text" size="30" maxlength="10" pattern="\d{10}" 
+                class="form-control" tabindex="2" placeholder="Enter your mobile number">
+            </div>
+            <div class="d-flex justify-content-center" style="padding: 3%; padding-bottom: -5%;">
+                <button class=" btn-lg" style="width: 30%; background-color: orange; color: black;" (click)='track()'>Track</button>
+            </div>
+        </div>
+        <!-- <h5 style="color: orange; margin-left:10%;">{{message}}</h5> -->
+        <!-- <h5 style="color: orange; margin-left:10%;">{{message1}}</h5> -->
+    </div>
+    <div *ngIf="message" >
+        <div id="fourth" class="bg-dark">
+            <h5 style="color: orange; margin-left:10%; padding-left: 12%;">{{message}}</h5>
+        </div>
+    </div>
+    <div *ngIf="message1" >
+        <div id="fourth" class="bg-dark" style="height: 70px;">
+            <h5 style="color: orange; margin-left:10%;  padding-left: 8%;">{{message1}} <br> Account Number: {{ user.accountNumber }}</h5>
+        </div>
+    </div>
+    <div *ngIf="message2" >
+        <div id="fourth" class="bg-dark">
+            <h5 style="color: orange; margin-left:10%; padding-left: 9%;">{{message2}}</h5>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- <body>
+      <table cellpadding="8">
+        <h2>Track Your Application Status Here</h2></table>
+        <br>
+        <br>
+            <table cellpadding ="8">
+                <br><br>
+              <tr>
+                  <td>Email Id</td>
+                  <td><input type="text" size="30" 
+                      tabindex="1" [(ngModel)]="email" placeholder="Enter your Regsitered mail">
+                  </td>
+              </tr>
+
+              <br>
+
+              <tr>
+                <td>Mobile Number</td>
+                <td>
+                    <input type="text" size="30" maxlength="10" pattern="\d{10}" 
+                    tabindex="2" placeholder="Enter your mobile number">
+                </td>
+            </tr>
+
+              <br><br>
+
+            <tr>
+                <td colspan="3">
+                    <button class="btn btn-primary"(click)='track()'>Track</button>
+                    <br>
+                    <br>
+                    <br>
+                   
+                    <br><br><br> 
+                </td>   
+            </tr>
+             <tr>
+                <td colspan="3">
+                   <h5>{{message}}</h5>
+                </td>   
+            </tr>
+      </table>
+    </body>
+</div> -->

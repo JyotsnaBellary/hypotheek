@@ -1,0 +1,60 @@
+body {
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+
+h2 {
+    
+    color: orange;
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    background-color: lightcoral;
+    width:600px;
+}
+
+#wrapper {
+    /* width: 500px; */
+    /* border: 1px solid black; */
+    overflow: hidden; 
+    /* justify-content: center; */
+    padding: 2%;
+}
+#first {
+    width: 700px;
+    float:left; /* add this */
+    border-radius: 2%;
+    border: black 1px solid;
+    margin: 2%;
+    padding: 2%;
+    height: 350px;
+    color: white;
+    font-weight:bold;
+
+
+}
+#second {
+  width: 400px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin: 2%;
+  padding: 2%;
+  height: 325px;
+  color: white;
+  font-weight:bold;
+}
+
+#third {
+  width: 400px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin: 2%;
+  padding: 2%;
+  height: 325px;
+  color: white;
+  font-weight:bold;
+}

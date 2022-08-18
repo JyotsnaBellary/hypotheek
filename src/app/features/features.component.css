@@ -1,0 +1,108 @@
+h2{
+  font-weight: bolder;
+  color: orange;
+}
+h1{
+  /* font-weight: dark; */
+  /* font-style: oblique; */
+}
+ul{
+  
+  border-radius: 0%;
+}
+p {
+  color:white;
+  font-weight: bold;
+}
+#wrapper {
+  /* width: 500px; */
+  /* border: 1px solid black; */
+  overflow: hidden; 
+  /* justify-content: center; */
+  padding: 1%;
+}
+#first {
+  width: 400px;
+  float:left; /* add this */
+  border-radius: 2%;
+  border: black 1px solid;
+  margin: 2%;
+  padding: 2%;
+  height: 400px;
+  color: white;
+  font-weight:bold;
+}
+#second {
+width: 400px;
+float:left; /* add this */
+border-radius: 2%;
+border: black 1px solid;
+margin: 2%;
+margin-left: 4%;
+padding: 1.5%;
+height: 400px;
+color: white;
+font-weight:bold;
+}
+#third {
+width: 400px;
+float:left; /* add this */
+border-radius: 1%;
+border: black 1px solid;
+margin: 2%;
+margin-left: 4%;
+padding: 1.5%;
+height: 400px;
+color: white;
+font-weight:bold;
+}
+#fourth {
+width: 325px;
+float:right; /* add this */
+border-radius: 2%;
+border: black 1px solid;
+margin:2%;
+margin-bottom: 4%;
+padding: 1.5%;
+height: 400px;
+color: white;
+font-weight:bold;
+background-color: orange;
+}
+#fifth {
+width: 325px;
+float:right; /* add this */
+border-radius: 2%;
+border: black 1px solid;
+margin:2%;
+margin-bottom: 4%;
+padding: 1.5%;
+height: 400px;
+color: white;
+font-weight:bold;
+}
+#sixth {
+width: 325px;
+float:right; /* add this */
+border-radius: 2%;
+border: black 1px solid;
+margin:2%;
+margin-bottom: 4%;
+padding: 1.5%;
+height: 400px;
+color: white;
+font-weight:bold;
+}
+Container holding the image and the text 
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+Centered text 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

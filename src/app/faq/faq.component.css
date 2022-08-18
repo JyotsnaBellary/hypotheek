@@ -1,0 +1,35 @@
+h1{
+    color: black;
+    font-weight: dark;
+    font-style: oblique;
+  }
+  h2{
+    font-size: large;
+    color: orange;
+    
+  }
+p{
+    color: white;
+}
+ul{
+    border-radius: 0%;
+  }
+
+#first {
+    width: 325px;
+    float:left; /* add this */
+    border-radius: 2%;
+    border: black 1px solid;
+    margin: 2%;
+    padding: 1%;
+    height: 400px;
+    color: white;
+    font-weight:bold;
+  }
+  #wrapper {
+    /* width: 500px; */
+    /* border: 1px solid black; */
+    overflow: hidden; 
+    /* justify-content: center; */
+    padding: 1%;
+  }
